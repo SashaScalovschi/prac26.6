@@ -11,6 +11,11 @@ module Validation
 
     true
   end
+  def self.valid_inn?(string)
+    return false unless string =~ /^[A-Z]{2}\d{10}$/
+
+    true
+end
 end
 
 puts "Введіть ім'я :"
@@ -21,4 +26,13 @@ if Validation.valid_name?(name)
 else
   puts "Ім'я '#{name}' є інвалідом(хибним)."  # Видалити "інваліда" перед комітом
 
+end
+
+puts "Введіть ІН (індивідуальки номер):"
+inn = gets.chomp
+
+if Validation.valid_inn?(inn)
+  puts "ІПН '#{inn}' є валідним."
+else
+  puts "ІПН '#{inn}' є недійсним."
 end
