@@ -32,7 +32,7 @@ puts "Введіть ІН (індивідуальки номер):"
 inn = gets.chomp
 
 if Validation.valid_inn?(inn)
-  puts "ІПН '#{inn}' є валідним."
+  puts "ІН '#{inn}' є валідним."
 else
-  puts "ІПН '#{inn}' є недійсним."
+  puts "ІН '#{inn}' є недійсним."
 end
