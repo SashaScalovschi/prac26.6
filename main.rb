@@ -16,6 +16,13 @@ module Validation
 
     true
 end
+
+def self.after_date?(date)
+  parsed_date = Date.parse(date) rescue nil
+  return false if parsed_date.nil?
+
+  parsed_date < Date.today
+end
 end
 
 puts "Введіть ім'я :"
@@ -35,4 +42,13 @@ if Validation.valid_inn?(inn)
   puts "ІН '#{inn}' є валідним."
 else
   puts "ІН '#{inn}' є недійсним."
+end
+
+puts "Введіть дату народження (у форматі рррр-мм-дд):"
+birthdate = gets.chomp
+
+if Validation.after_date?(birthdate)
+  puts "Вказана дата '#{birthdate}' є допустимою датою народження."
+else
+  puts "Вказана дата '#{birthdate}' є недійсною датою народження."
 end
