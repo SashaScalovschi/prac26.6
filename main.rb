@@ -1,6 +1,3 @@
-Encoding.default_external = Encoding::UTF_8
-Encoding.default_internal = Encoding::UTF_8
-# encoding: utf-8
 
 module Validation
 
@@ -16,7 +13,7 @@ module Validation
   end
 end
 
-puts "Введіть ім'я (Важливе зауваження не використовуйте іменя які включають в собі укроїнський символ 'і'):"
+puts "Введіть ім'я :"
 name = gets.chomp  #Замінити на "і" англійське 
 
 if Validation.valid_name?(name)
