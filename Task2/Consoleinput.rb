@@ -39,20 +39,5 @@ module ConsoleInput
     def get_inn_input
       get_input("Enter INN value: ", ->(input) { valid_inn?(input) })
     end
-  
-    def valid_name?(name)
-      # Реалізуйте валідацію для імені
-      # Поверніть true, якщо ім'я є валідним, інакше - false
-    end
-  
-    def valid_birth_date?(birth_date)
-      # Реалізуйте валідацію для дати народження
-      # Поверніть true, якщо дата народження є валідною, інакше - false
-    end
-  
-    def valid_inn?(inn)
-      # Реалізуйте валідацію для ІПН
-      # Поверніть true, якщо ІПН є валідним, інакше - false
-    end
   end
   
