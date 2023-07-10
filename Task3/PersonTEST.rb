@@ -70,8 +70,5 @@ RSpec.describe Person do
       expect(person.inn).to eq('ER9876543210')
     end
 
-    it 'raises an error when setting an invalid INN' do
-      expect { person.inn = nil }.to raise_error(ArgumentError)
-      expect { person.inn = '12345' }.to raise_error(ArgumentErrorОновлений тестовий код включує перевірку формату ІПН (AZ1234543456) та додаткові значення для імен, прізвищ і ІПН. Тест перевіряє правильність роботи методів та обробку неправильних вхідних даних.
-
-Будь ласка, використовуйте цей оновлений тестовий код для перевірки класу `Person`.
+    it 'raiseі INN' do
+      expect { person.inn = nil }.to raise_error
